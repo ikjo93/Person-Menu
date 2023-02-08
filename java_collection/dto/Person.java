@@ -1,4 +1,4 @@
-package collections.dto;
+package personmenu.java_collection.dto;
 
 import java.io.Serializable;
 

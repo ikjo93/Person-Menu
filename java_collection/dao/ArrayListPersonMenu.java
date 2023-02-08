@@ -1,9 +1,9 @@
-package collections.dao;
+package personmenu.java_collection.dao;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import collections.dto.Person;
+import personmenu.java_collection.dto.Person;
 
 import java.io.*;
 import java.util.ArrayList;

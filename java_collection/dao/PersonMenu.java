@@ -1,6 +1,6 @@
-package collections.dao;
+package personmenu.java_collection.dao;
 
-import collections.dto.Person;
+import personmenu.java_collection.dto.Person;
 
 import java.util.List;
 

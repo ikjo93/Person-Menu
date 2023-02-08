@@ -1,7 +1,7 @@
-package collections;
+package personmenu.java_collection;
 
-import collections.dao.ArrayListPersonMenu;
-import collections.dao.PersonMenu;
+import personmenu.java_collection.dao.ArrayListPersonMenu;
+import personmenu.java_collection.dao.PersonMenu;
 
 import java.io.IOException;
 

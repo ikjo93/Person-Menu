@@ -1,43 +1,40 @@
-package collections;
-
-import collections.dao.PersonMenu;
-import collections.ui.UserInput;
-import collections.ui.UserView;
+package personmenu.jdbc;
 
 import java.io.IOException;
 
-public class PersonMenuTest {
+import personmenu.jdbc.dao.PersonDao;
+import personmenu.jdbc.display.UserInput;
+import personmenu.jdbc.display.UserView;
 
+public class PersonTest {
+	
     private static final UserInput ui = UserInput.getInstance();
     private static final UserView uv = UserView.getInstance();
-    private final PersonMenu pm;
-
-    public PersonMenuTest(PersonMenu pm) {
-        this.pm = pm;
+    private final PersonDao pd;
+    
+    public PersonTest(PersonDao pd) {
+        this.pd = pd;
     }
-
-    public void run() {
-        Main : while (true) {
+    
+	public void run() {
+		Main : while (true) {
             try {
                 int number = ui.getOptionNumber();
 
                 switch (number) {
                     case 1:
-                        pm.insert(ui.getNewPerson());
+                    	pd.insert(ui.getNewPerson());
                         break;
                     case 2:
-                        uv.search(pm.select());
+                        uv.search(pd.findAll());
                         break;
                     case 3:
-                        pm.update(ui.getUpdatePerson());
+                    	pd.update(ui.getUpdatePerson());
                         break;
                     case 4:
-                        pm.delete(ui.getDeleteIndex());
+                    	pd.deleteByNo(ui.getDeleteIndex());
                         break;
                     case 5:
-                        pm.save();
-                        break;
-                    case 6:
                         uv.exit();
                         break Main;
                     default:
@@ -51,5 +48,5 @@ public class PersonMenuTest {
                 e.printStackTrace();
             }
         }
-    }
+	}
 }

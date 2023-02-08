@@ -1,6 +1,6 @@
-package collections.ui;
+package personmenu.java_collection.ui;
 
-import collections.dto.Person;
+import personmenu.java_collection.dto.Person;
 
 import java.io.BufferedReader;
 import java.io.IOException;

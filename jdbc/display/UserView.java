@@ -1,8 +1,8 @@
-package collections.ui;
-
-import collections.dto.Person;
+package personmenu.jdbc.display;
 
 import java.util.List;
+
+import personmenu.jdbc.dto.Person;
 
 public class UserView {
 
@@ -18,7 +18,7 @@ public class UserView {
         StringBuilder view = new StringBuilder();
         view.append("\n#사람목록\n");
         for (Person person : people) {
-            view.append(person.getIndex()).append(": [")
+            view.append(person.getNo()).append(": [")
                     .append(person.getName())
                     .append(",")
                     .append(person.getAge())
